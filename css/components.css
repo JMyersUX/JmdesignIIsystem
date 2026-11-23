@@ -1,4 +1,4 @@
-﻿/* =====================================================================
+/* =====================================================================
    Components: Information Card, Persona Card, Carousel, Image Grid
    Values come from the Figma file "Design System Case Study"
    (page: Foundations and Components). Colors use the tokens in style.css.
@@ -11,7 +11,7 @@
   background: var(--surface-card); border-radius: 16px;
   overflow: clip; overflow-wrap: break-word;
 }
-.info-card__eyebrow { margin: 0; font: 700 12px/16px 'Roboto', sans-serif; letter-spacing: .96px; color: var(--text-accent); }
+.info-card__eyebrow { margin: 0; font: 700 12px/16px 'Roboto', sans-serif; letter-spacing: .96px; color: var(--text-title); }
 .info-card__title   { margin: 0; font: 500 18px/26px 'Roboto', sans-serif; color: var(--text-title); }
 .info-card__body    { margin: 0; font: 400 16px/24px 'Roboto', sans-serif; color: var(--text-title); }
 
