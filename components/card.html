@@ -83,7 +83,7 @@
   <h4 class="code-title">Anatomy</h4>
   <ol class="anatomy">
     <li><strong>Container</strong>: white card with rounded corners.</li>
-    <li><strong>Small title</strong>: an eyebrow label in Chip Label style with wide letter spacing, in Text/Accent.</li>
+    <li><strong>Small title</strong>: an eyebrow label in Chip Label style with wide letter spacing, in Text/Title.</li>
     <li><strong>Title</strong>: Medium weight 18px, Text/Title.</li>
     <li><strong>Body</strong>: Regular 16px, Text/Title.</li>
   </ol>
@@ -97,7 +97,7 @@
       <tr><td>Background</td><td><code>#FFFFFF</code></td><td>Surface/Card</td></tr>
       <tr><td>Radius</td><td><code>16px</code>, <code>overflow: clip</code></td><td>-</td></tr>
       <tr><td>Border and shadow</td><td>none</td><td>-</td></tr>
-      <tr><td>Small title</td><td>Roboto Bold <code>12px / 16px</code>, <code>letter-spacing: .96px</code>, <code>#8B6D9C</code></td><td>Chip Label, Text/Accent</td></tr>
+      <tr><td>Small title</td><td>Roboto Bold <code>12px / 16px</code>, <code>letter-spacing: .96px</code>, <code>#272744</code></td><td>Chip Label, Text/Title</td></tr>
       <tr><td>Title</td><td>Roboto Medium <code>18px / 26px</code>, <code>#272744</code></td><td>Text/Title</td></tr>
       <tr><td>Body</td><td>Roboto Regular <code>16px / 24px</code>, <code>#272744</code></td><td>Paragraph, Text/Title</td></tr>
       <tr><td>Text wrapping</td><td><code>overflow-wrap: break-word</code></td><td>-</td></tr>
@@ -116,7 +116,7 @@
   overflow: clip;
   overflow-wrap: break-word;
 }
-.info-card__eyebrow { margin: 0; font: 700 12px/16px 'Roboto', sans-serif; letter-spacing: .96px; color: var(--text-accent); }
+.info-card__eyebrow { margin: 0; font: 700 12px/16px 'Roboto', sans-serif; letter-spacing: .96px; color: var(--text-title); }
 .info-card__title   { margin: 0; font: 500 18px/26px 'Roboto', sans-serif; color: var(--text-title); }
 .info-card__body    { margin: 0; font: 400 16px/24px 'Roboto', sans-serif; color: var(--text-title); }</code></pre>
   <h4 class="code-title">HTML</h4>
@@ -125,7 +125,6 @@
   &lt;h3 class="info-card__title"&gt;Title&lt;/h3&gt;
   &lt;p class="info-card__body"&gt;Body text.&lt;/p&gt;
 &lt;/article&gt;</code></pre>
-  <p class="provisional"><strong>Check:</strong> Text/Accent (#8B6D9C) on white is 4.41:1, under the 4.5:1 AA minimum for 12px text. Figma uses it for the small title. Before shipping, use Text/Secondary (7.94:1) or a darker purple for that label.</p>
 </div>
 
 <div class="variant">
@@ -208,7 +207,6 @@
 <ul class="rule-list">
   <li><strong>Structure:</strong> each card is an <code>&lt;article&gt;</code> and its title is a real heading. Use the next level under the section heading (for example <code>h3</code> under an <code>h2</code>), so screen reader users can jump from card to card. The eyebrow "Small title" is a <code>&lt;p&gt;</code>, not a heading.</li>
   <li><strong>Contrast:</strong> Title on white is 14.38:1. Body text (Text/Title) is 14.38:1 and Persona text (Text/Primary) is 21:1. Image label Text/Title on Image/Pink is 6.10:1. All pass WCAG AA.</li>
-  <li><strong>Known failure:</strong> the 12px eyebrow in Text/Accent on white is 4.41:1 and does not meet the 4.5:1 minimum. Change the label color before shipping.</li>
   <li><strong>Images:</strong> a photo of a person needs real alt text that describes them in a useful way. A purely decorative image uses <code>alt=""</code>. A placeholder box uses <code>role="img"</code> with an <code>aria-label</code>.</li>
   <li><strong>Not interactive:</strong> the cards are not links or buttons, so they are not in the tab order. If a whole card must be clickable, put one link on the title and stretch it over the card with <code>::after</code>. Don't wrap the card in a link with more links inside. Give it a visible focus outline, <code>3px solid #272744</code> with <code>3px</code> offset (provisional, not in Figma).</li>
   <li><strong>Reflow and zoom:</strong> width is <code>100%</code> with a max width, so the card shrinks at 320px and never scrolls sideways. Height is never fixed, so text can grow at 200% zoom. Text uses <code>overflow-wrap: break-word</code> for long words.</li>
