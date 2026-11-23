@@ -1,0 +1,217 @@
+/* Design system site – tokens from DESIGN.md (Figma: Game Tracking Site) */
+:root {
+  /* Primitives */
+  --off-white: #D9D9D9;
+  --muted-orange: #F2D3AB;
+  --muted-pink: #C69FA5;
+  --light-purple: #8B6D9C;
+  --dark-blue: #272744;
+  --blue-purple: #494D7E;
+  --cream: #FBF5EF;
+  --white: #FFFFFF;
+  --black: #000000;
+  --hint-grey: #6B6E8C;
+  --disabled-grey: #565656;
+
+  /* Tokens */
+  --color-nav-bar: var(--dark-blue);
+  --color-button: var(--blue-purple);
+  --color-button-hover: var(--light-purple);
+  --color-button-disabled: var(--disabled-grey);
+  --color-page-bg: var(--off-white);
+  --color-card-bg: var(--white);
+  --color-logo-text: var(--cream);
+  --color-text-primary: var(--dark-blue);
+  --color-text-secondary: var(--blue-purple);
+  --color-text-hint: var(--hint-grey);
+  --color-text-on-dark: var(--white);
+  --color-highlight: var(--muted-orange);
+  --color-border-strong: var(--dark-blue);
+
+  /* Tokens (DESIGN.md: Design System Case Study) */
+  --surface-page: var(--off-white);
+  --surface-card: var(--white);
+  --surface-input: var(--white);
+  --surface-nav: var(--dark-blue);
+  --surface-logo-circle: var(--cream);
+  --surface-card-alt: var(--cream);
+  --text-primary: var(--black);
+  --text-title: var(--dark-blue);
+  --text-secondary: var(--blue-purple);
+  --text-hint: var(--hint-grey);
+  --text-on-nav: var(--cream);
+  --text-on-button: var(--white);
+  --text-accent: var(--light-purple);
+  --text-on-dark: var(--white);
+  --button-default: var(--blue-purple);
+  --button-hover: var(--light-purple);
+  --button-disabled: var(--disabled-grey);
+  --image-orange: var(--muted-orange);
+  --image-pink: var(--muted-pink);
+  --control-background: var(--dark-blue);
+  --control-inactive: var(--hint-grey);
+  --border-divider: var(--hint-grey);
+  --border-outline: var(--dark-blue);
+  --nav-active-indicator: var(--blue-purple);
+
+  /* Provisional (not in DESIGN.md) */
+  --radius: 12px;
+  --space: 16px;
+  --max-width: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background: var(--color-page-bg);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { flex: 1; }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+h1 { font-size: 32px; font-weight: 700; margin: 0 0 16px; }
+h2 { font-size: 24px; font-weight: 700; margin: 0 0 12px; }
+h3 { font-size: 20px; font-weight: 700; margin: 0 0 8px; }
+p  { margin: 0 0 16px; line-height: 1.5; }
+a  { color: var(--color-text-secondary); font-weight: 300; }
+
+:focus-visible { outline: 3px solid var(--muted-orange); outline-offset: 3px; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 8px;
+  background: var(--white); color: var(--dark-blue); padding: 8px 16px; z-index: 100;
+}
+.skip-link:focus { left: 8px; }
+
+/* Navigation bar */
+.site-header { background: var(--white); box-shadow: 0 2px 12px rgba(0,0,0,.25); position: relative; z-index: 20; }
+.site-header :focus-visible { outline-color: var(--blue-purple); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
+.logo { display: flex; align-items: center; gap: 12px; color: var(--dark-blue); font-weight: 700; font-size: 24px; text-decoration: none; }
+.logo img { height: 40px; width: auto; display: block; }
+
+.nav { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.nav-item { position: relative; }
+.nav-btn {
+  background: none; border: 0; cursor: pointer;
+  font: 400 24px 'Roboto', sans-serif; color: var(--dark-blue);
+  padding: 12px 16px; border-radius: 8px;
+}
+.nav-btn:hover, .nav-btn[aria-expanded="true"] { background: var(--color-highlight); }
+.nav-btn::after { content: " \25BE"; font-size: 16px; }
+.menu {
+  display: none; position: absolute; right: 0; top: 100%; z-index: 10;
+  min-width: 220px; list-style: none; margin: 4px 0 0; padding: 8px;
+  background: var(--color-card-bg); border: 2px solid var(--color-border-strong); border-radius: var(--radius);
+}
+.nav-btn[aria-expanded="true"] + .menu { display: block; }
+.menu a {
+  display: block; padding: 10px 12px; border-radius: 6px;
+  font-size: 18px; font-weight: 400; color: var(--color-text-primary); text-decoration: none;
+}
+.menu a:hover { background: var(--color-highlight); }
+
+/* Space scene (cover page) */
+.space { position: relative; overflow: hidden; background: var(--dark-blue); color: var(--color-text-on-dark); padding-bottom: 360px; }
+.stars {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, #fff, transparent),
+    radial-gradient(1px 1px at 28% 62%, #fff, transparent),
+    radial-gradient(2px 2px at 44% 30%, var(--cream), transparent),
+    radial-gradient(1px 1px at 63% 12%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 78% 48%, #fff, transparent),
+    radial-gradient(1px 1px at 91% 22%, var(--cream), transparent),
+    radial-gradient(1px 1px at 6% 78%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 55% 70%, #fff, transparent);
+}
+.space { --moon: min(120vw, 1800px); padding-bottom: calc(var(--moon) * 0.3); }
+.moon {
+  position: absolute; left: 50%; bottom: calc(var(--moon) * -0.62); z-index: 0;
+  width: var(--moon); height: auto; aspect-ratio: 1;
+  margin-left: calc(var(--moon) / -2);
+  /* slow spin starts once the fast intro spin (listed last, so it wins) ends */
+  animation: moon-spin 240s linear 1.3s infinite, moon-intro 1.3s cubic-bezier(.15,.6,.3,1);
+}
+/* The moon rises out of the darkness: a fixed dark fade over its top edge.
+   (The moon spins, so the fade can't be part of the moon itself.) */
+.space::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 0;
+  height: calc(var(--moon) * 0.4);
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+    var(--dark-blue) 0%,
+    rgba(39, 39, 68, .88) 15%,
+    rgba(39, 39, 68, .5) 42%,
+    rgba(39, 39, 68, 0) 80%);
+}
+@keyframes moon-spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes moon-intro { from { transform: rotate(-240deg); } to { transform: rotate(0); } }
+/* Cards orbit the moon: same angle, duration and easing as moon-intro, pivoting on the moon's center
+   (0.12 * moon below the section bottom, plus the 0.3 * moon bottom padding below the cards) */
+.cards {
+  transform-origin: 50% calc(100% + var(--moon) * 0.42);
+  animation: orbit-in 1.7s backwards;
+}
+/* Follow-through: the cards swing past their spot, then ease back */
+@keyframes orbit-in {
+  0%   { transform: rotate(-240deg); animation-timing-function: cubic-bezier(.2,.7,.4,1); }
+  65%  { transform: rotate(5deg);    animation-timing-function: ease-in-out; }
+  85%  { transform: rotate(-1.5deg); animation-timing-function: ease-in-out; }
+  100% { transform: rotate(0); }
+}
+/* Squash & stretch: stretched in flight, squashed at the overshoot, back to full size on the spot */
+@keyframes card-squash {
+  0%   { transform: scale(1.04, .97); }
+  55%  { transform: scale(1.04, .97); animation-timing-function: ease-out; }
+  66%  { transform: scale(.93, 1.06); }
+  82%  { transform: scale(1.02, .98); }
+  100% { transform: scale(1); }
+}
+
+/* Hero */
+.hero { position: relative; z-index: 1; padding: 64px 0 24px; }
+.hero h1 { font-size: 48px; max-width: 16ch; }
+.hero p { font-size: 20px; max-width: 52ch; color: var(--cream); }
+
+/* Buttons */
+.btn {
+  display: inline-block; padding: 12px 24px; border-radius: 8px; border: 0;
+  background: var(--color-button); color: var(--color-text-on-dark);
+  font: 700 14px 'Roboto', sans-serif; text-decoration: none; cursor: pointer;
+  min-height: 44px; transition: background .15s;
+}
+.btn:hover { background: var(--color-button-hover); }
+.btn[disabled], .btn[aria-disabled="true"] { background: var(--color-button-disabled); cursor: not-allowed; }
+
+/* Section cards */
+.cards { position: relative; z-index: 1; display: grid; grid-auto-rows: 1fr; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); padding-top: 24px; }
+.card { color: var(--color-text-primary); background: var(--color-card-bg); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; box-shadow: 0 12px 32px rgba(0,0,0,.35); }
+.card { transform-origin: 50% 50%; animation: card-squash 1.7s ease-in-out backwards; }
+@media (prefers-reduced-motion: reduce) { .moon, .cards, .card { animation: none !important; } }
+.card h2 { font-size: 28px; }
+.card p { color: var(--color-text-secondary); flex: 1; }
+.card ul { padding-left: 20px; margin: 0 0 20px; color: var(--color-text-hint); }
+.card .btn { align-self: flex-start; }
+
+/* Footer */
+.site-footer { background: var(--color-nav-bar); color: var(--color-text-on-dark); padding: 24px 0; font-size: 12px; }
+.site-footer p { margin: 0; }
+
+@media (max-width: 767px) {
+  .site-header .wrap { flex-direction: column; align-items: flex-start; padding-top: 12px; padding-bottom: 12px; }
+  .nav { flex-wrap: wrap; }
+  .nav-btn { font-size: 18px; }
+  .menu { right: auto; left: 0; }
+  .hero { padding: 48px 0 32px; }
+  .hero h1 { font-size: 36px; }
+}

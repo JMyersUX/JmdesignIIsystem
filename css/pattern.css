@@ -1,0 +1,148 @@
+﻿/* =====================================================================
+   Page pattern: BeeFriendly Case Study
+   Layout from the Figma page "Design" (Desktop 1728, Tablet 834, Mobile 440).
+   Uses the tokens from style.css and the Card, Carousel and Image Grid components.
+   ===================================================================== */
+
+.nav-btn.current { box-shadow: inset 0 -3px 0 var(--nav-active-indicator); }
+
+/* Page title band */
+.cs-title { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 24px; text-align: center; background: var(--surface-nav); color: var(--text-on-dark); }
+.cs-title h1 { margin: 0; font: 700 64px/1.2 'Roboto', sans-serif; overflow-wrap: anywhere; }
+.cs-title p { margin: 0; font: 400 20px/1.3 'Roboto', sans-serif; }
+
+/* Sections: content column is 936px wide, centered, 12px side gutter */
+.cs-section { padding-block: 48px; }
+.cs-inner { max-width: calc(936px + 24px); margin-inline: auto; padding-inline: 12px; }
+.cs-stack-24 { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+.cs-stack-32 { display: flex; flex-direction: column; gap: 32px; }
+.cs-stack-40 { display: flex; flex-direction: column; gap: 40px; }
+.cs-stack-24 > .cs-text, .cs-stack-24 > .image-grid-frame { width: 100%; }
+.cs-narrow { max-width: 680px; }
+
+/* Text column: eyebrow, h2, paragraphs, h3 */
+.cs-text { display: flex; flex-direction: column; gap: 16px; overflow-wrap: break-word; }
+.cs-text > * { margin: 0; }
+.cs-eyebrow { font: 700 12px/1.3 'Roboto', sans-serif; color: var(--text-secondary); }
+.cs-text h2 { font: 700 24px/1.2 'Roboto', sans-serif; color: var(--text-title); }
+.cs-text h3, .cs-label { font: 700 20px/1.3 'Roboto', sans-serif; color: var(--text-title); }
+.cs-label { margin: 0; font-weight: 500; font-size: 16px; }
+.cs-text p { font: 400 16px/1.6 'Roboto', sans-serif; color: var(--text-primary); }
+.cs-text ul { padding-left: 24px; display: grid; gap: 16px; font: 400 16px/1.6 'Roboto', sans-serif; color: var(--text-primary); }
+.cs-text ul li { padding-left: 4px; }
+.cs-text ul li::marker { color: var(--text-primary); }
+
+/* Hero */
+.cs-hero { padding-block: 48px 0; }
+.cs-hero .cs-inner { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; padding-bottom: 48px; }
+.cs-cover { width: 100%; height: 480px; border-radius: 24px; overflow: clip; background: #FDF0E6; }   /* matches the flat background color of cover.png so the image blends in */
+.cs-cover img { width: 100%; height: 100%; display: block; }
+.cs-contain img { object-fit: contain; }
+.cs-wide { width: 100%; border-radius: 24px; overflow: clip; background: var(--image-orange); }
+.cs-wide img { width: 100%; height: auto; display: block; }
+.cs-wide.cs-contain img { height: auto; }
+.cs-auto img { width: 100%; height: auto; display: block; }
+.cs-figure { margin: 0; display: flex; flex-direction: column; gap: 32px; }
+.cs-figure figcaption { margin-top: -20px; font: 400 12px/1.4 'Roboto', sans-serif; color: var(--text-secondary); }
+
+/* Button (Button/Default, Button/Hover) */
+.cs-btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 5px 16px;
+  border-radius: 8px; background: var(--button-default); color: var(--text-on-button);
+  font: 700 20px/normal 'Roboto', sans-serif; text-decoration: none; transition: background .15s;
+}
+.cs-btn:hover { background: var(--button-hover); }
+
+/* Details */
+.cs-details-title { margin: 0 0 16px; font: 700 24px/32px 'Roboto', sans-serif; color: var(--text-title); }
+.cs-details { margin: 0; }
+.cs-details > div { display: flex; gap: 24px; padding: 12px 0; border-bottom: 1px solid var(--border-divider); font: 400 16px/24px 'Roboto', sans-serif; }
+.cs-details dt { flex: 0 0 120px; font-weight: 500; color: var(--text-title); }
+.cs-details dd { flex: 1 1 0; min-width: 0; margin: 0; color: var(--text-primary); }
+
+/* Callout */
+.cs-callout { margin: 0; font: 700 28px/1.3 'Roboto', sans-serif; color: var(--text-title); }
+
+/* Personas (two columns, 24px gap) */
+.cs-personas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.cs-personas .persona-card { max-width: none; }
+.persona-card__media.cs-auto { height: auto; padding: 0; background: var(--image-pink); }
+
+/* Findings (Information Cards, stacked, 16px gap) */
+.cs-findings { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+.cs-findings .info-card { max-width: none; }
+
+/* Photo tiles in the Image Grid */
+.image-grid--photos .image-grid__item { padding: 0; }
+.image-grid--photos .image-grid__item img { border-radius: 0; }
+.image-grid--photos .image-grid__item.cs-contain img { object-fit: contain; }
+
+/* The carousel shows photos of phone screens without cropping them */
+.carousel__media.cs-contain { padding: 0; }
+.carousel__media.cs-contain img { object-fit: contain; }
+
+/* More projects */
+.cs-more-head { display: flex; align-items: center; justify-content: space-between; }
+.cs-more-head h2 { margin: 0; font: 700 24px/1.2 'Roboto', sans-serif; color: var(--text-title); }
+.cs-more-head a, .cs-more-all { font: 500 16px/1.3 'Roboto', sans-serif; color: var(--text-title); }
+.cs-projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; }
+.cs-projects li { display: flex; flex-direction: column; gap: 12px; }
+.cs-projects p { margin: 0; font: 400 18px/1.4 'Roboto', sans-serif; color: var(--text-primary); }
+.cs-projects strong { color: var(--text-title); }
+
+/* Footer */
+.cs-footer { background: var(--surface-nav); color: var(--text-on-nav); padding-block: 32px; }
+.cs-footer__inner { max-width: calc(936px + 24px); margin-inline: auto; padding-inline: 12px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.cs-footer p { margin: 0; font: 400 16px/1.6 'Roboto', sans-serif; }
+.cs-footer ul { display: flex; gap: 24px; margin: 0; padding: 0; list-style: none; }
+.cs-footer a { color: var(--text-on-nav); font: 700 14px/1.3 'Roboto', sans-serif; text-decoration: none; padding-block: 12px; display: inline-block; }
+.cs-footer a:hover { text-decoration: underline; }
+.cs-footer a:focus-visible { outline-color: var(--text-on-nav); }
+.cs-btn:focus-visible, .cs-more-head a:focus-visible { outline: 3px solid var(--border-outline); outline-offset: 3px; }
+.cs-hero .cs-btn:focus-visible { outline-color: var(--border-outline); }
+
+/* Tablet (Figma 834): 36px section padding */
+@media (max-width: 1099px) {
+  .cs-section { padding-block: 36px; }
+  .cs-hero { padding-block: 36px 0; }
+  .cs-hero .cs-inner { padding-bottom: 36px; }
+}
+/* Mobile (Figma 440): 28px section padding, single column */
+@media (max-width: 699px) {
+  .cs-section { padding-block: 28px; }
+  .cs-hero { padding-block: 28px 0; }
+  .cs-hero .cs-inner { padding-bottom: 28px; }
+  .cs-personas, .cs-projects { grid-template-columns: 1fr; }
+  .cs-cover { border-radius: 24px; }
+}
+@media (max-width: 400px) {   /* Figma keeps 64px at 440px; only very small phones step down */
+  .cs-title h1 { font-size: 48px; }
+}
+@media (prefers-reduced-motion: reduce) { .cs-btn { transition: none; } }
+
+
+/* Real images sit directly on the page: no colored placeholder backgrounds (the hero image keeps its own) */
+.image-grid--photos .image-grid__item,
+.image-grid--photos .image-grid__item:nth-child(n) { background: transparent; }
+.carousel__media.cs-contain,
+.carousel__media--pink.cs-contain,
+.carousel__media--cream.cs-contain { background: transparent; outline: 0; }
+.persona-card__media.cs-auto { background: transparent; }
+.cs-wide { background: transparent; }
+
+/* Click-to-enlarge images */
+.zoom-btn { display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in; font: inherit; color: inherit; }
+.zoom-btn:focus-visible { outline: 3px solid var(--border-outline); outline-offset: -3px; }
+.zoom-btn img { transition: opacity .15s; }
+.zoom-btn:hover img { opacity: .92; }
+.lightbox { width: 100vw; max-width: 100vw; height: 100vh; max-height: 100vh; margin: 0; padding: 56px 16px 16px; border: 0; background: rgba(39, 39, 68, .92); color: var(--text-on-nav); overflow: auto; }
+.lightbox[open] { display: flex; align-items: center; justify-content: center; }
+.lightbox::backdrop { background: rgba(39, 39, 68, .92); }
+.lightbox__figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 100%; }
+.lightbox__img { display: block; max-width: min(100%, 1600px); max-height: calc(100vh - 140px); width: auto; height: auto; object-fit: contain; border-radius: 8px; background: var(--white); }
+.lightbox__caption { max-width: 70ch; text-align: center; font: 400 14px/1.4 'Roboto', sans-serif; color: var(--text-on-nav); }
+.lightbox__close { position: fixed; top: 12px; right: 12px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 2px solid var(--text-on-nav); border-radius: 50%; background: var(--control-background); color: var(--text-on-nav); font: 500 28px/1 'Roboto', sans-serif; cursor: pointer; }
+.lightbox__close:hover { background: var(--button-hover); }
+.lightbox__close:focus-visible { outline: 3px solid var(--text-on-nav); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .zoom-btn img { transition: none; } }
+

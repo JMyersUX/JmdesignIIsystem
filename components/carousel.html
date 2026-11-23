@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel | Components | Design System</title>
+  <link rel="icon" href="../images/Favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/foundations.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html" aria-label="Design System home">
+        <img src="../images/color.svg" alt="">
+        <span>Design System</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-foundations">Foundations</button>
+            <ul class="menu" id="menu-foundations">
+              <li><a href="../foundations/color-palette.html">Color Palette</a></li>
+              <li><a href="../foundations/typography.html">Typography</a></li>
+              <li><a href="../foundations/logo.html">Logo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn current" aria-expanded="false" aria-controls="menu-components">Components</button>
+            <ul class="menu" id="menu-components">
+              <li><a href="../components/card.html">Card</a></li>
+              <li><a href="../components/carousel.html" aria-current="page">Carousel</a></li>
+              <li><a href="../components/image-grid.html">Image Grid</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-patterns">Page Patterns</button>
+            <ul class="menu" id="menu-patterns">
+              <li><a href="../patterns/index.html">BeeFriendly Case Study</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title"><h1>Components</h1></div>
+  <nav class="subnav" aria-label="Components pages">
+    <ul>
+      <li><a href="card.html">Card</a></li>
+      <li><a href="carousel.html" aria-current="page">Carousel</a></li>
+      <li><a href="image-grid.html">Image Grid</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <div class="content">
+<h2>Carousel</h2>
+<p class="lead">A carousel shows a row of slides inside one card. People move through it with arrow buttons, dots, the keyboard, or by swiping. It never moves on its own.</p>
+
+<h3 class="sub-h">Image Carousel</h3>
+<p><strong>Used for:</strong> showing a set of screens or images with a short title and text for each. The Figma version is 936px wide, with 340px slides.</p>
+<div role="group" aria-label="Device size" class="view-toggle">
+  <button type="button" data-view-target="desktop" aria-pressed="true">Desktop</button>
+  <button type="button" data-view-target="tablet" aria-pressed="false">Tablet</button>
+  <button type="button" data-view-target="mobile" aria-pressed="false">Mobile</button>
+</div>
+<p class="view-note">Switch the device to see the layout change. It follows the width of its frame (936px, 810px or 416px), not the window.</p><div class="demo-stage device-frame" data-frame style="max-width:936px">
+  <section class="carousel" data-carousel aria-roledescription="carousel" aria-labelledby="car-title">
+    <p class="carousel__eyebrow">Page title</p>
+    <h4 class="carousel__title" id="car-title">Description</h4>
+    <div class="carousel__viewport" tabindex="0" role="group" aria-label="Slides. Use the left and right arrow keys to move.">
+      <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+        <h4 class="carousel__slide-title">Slide 1 title</h4>
+        <p class="carousel__slide-text">lorem ipsum dolor sit amet consectetur adipiscing elit et ex quibusdam aliqua corrupti cillum omnis</p>
+        <div class="carousel__media " role="img" aria-label="Welcome screen of the app (placeholder)">hifi-welcome.png</div>
+      </div>
+      <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+        <h4 class="carousel__slide-title">Slide 2 title</h4>
+        <p class="carousel__slide-text">lorem ipsum dolor sit amet consectetur adipiscing elit et ex quibusdam aliqua corrupti cillum omnis</p>
+        <div class="carousel__media carousel__media--pink" role="img" aria-label="Scan screen of the app (placeholder)">hifi-scan.png</div>
+      </div>
+      <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+        <h4 class="carousel__slide-title">Slide 3 title</h4>
+        <p class="carousel__slide-text">lorem ipsum dolor sit amet consectetur adipiscing elit et ex quibusdam aliqua corrupti cillum omnis</p>
+        <div class="carousel__media carousel__media--cream" role="img" aria-label="Home screen of the app (placeholder)">hifi-home.png</div>
+      </div>
+      <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+        <h4 class="carousel__slide-title">Slide 4 title</h4>
+        <p class="carousel__slide-text">lorem ipsum dolor sit amet consectetur adipiscing elit et ex quibusdam aliqua corrupti cillum omnis</p>
+        <div class="carousel__media " role="img" aria-label="Catalog screen of the app (placeholder)">hifi-catalog.png</div>
+      </div>
+      <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+        <h4 class="carousel__slide-title">Slide 5 title</h4>
+        <p class="carousel__slide-text">lorem ipsum dolor sit amet consectetur adipiscing elit et ex quibusdam aliqua corrupti cillum omnis</p>
+        <div class="carousel__media carousel__media--pink" role="img" aria-label="Garden screen of the app (placeholder)">hifi-garden.png</div>
+      </div>
+    </div>
+    <div class="carousel__controls">
+      <button class="carousel__btn" type="button" data-carousel-prev aria-label="Previous slide"><span aria-hidden="true">&lsaquo;</span></button>
+      <ul class="carousel__dots">
+        <li><button class="carousel__dot" type="button" aria-label="Go to slide 1"></button></li>
+        <li><button class="carousel__dot" type="button" aria-label="Go to slide 2"></button></li>
+        <li><button class="carousel__dot" type="button" aria-label="Go to slide 3"></button></li>
+        <li><button class="carousel__dot" type="button" aria-label="Go to slide 4"></button></li>
+        <li><button class="carousel__dot" type="button" aria-label="Go to slide 5"></button></li>
+      </ul>
+      <button class="carousel__btn" type="button" data-carousel-next aria-label="Next slide"><span aria-hidden="true">&rsaquo;</span></button>
+    </div>
+    <p class="sr-only" role="status" aria-live="polite" data-carousel-status></p>
+  </section>
+</div>
+
+<h3 class="sub-h">Anatomy</h3>
+<ol class="anatomy">
+  <li><strong>Panel</strong>: white card that holds everything.</li>
+  <li><strong>Page title</strong>: small eyebrow label in Text/Secondary.</li>
+  <li><strong>Description</strong>: Medium 20px heading in Text/Title.</li>
+  <li><strong>Viewport</strong>: the row of slides. It scrolls sideways and snaps to each slide.</li>
+  <li><strong>Slide</strong>: a Surface/Card Alt card with a title, text and an image.</li>
+  <li><strong>Controls</strong>: previous button, one dot per slide, next button.</li>
+</ol>
+
+
+<h3 class="sub-h">Responsive Layouts</h3>
+<p>The carousel keeps the same padding, slide size and image height on every device. Only the width changes, so the number of slides in view changes with it.</p>
+<div class="table-scroll"><table class="spec-table" aria-label="Carousel layouts by device">
+  <thead><tr><th scope="col">Part</th><th scope="col">Desktop (936px)</th><th scope="col">Tablet (810px)</th><th scope="col">Mobile (416px)</th></tr></thead>
+  <tbody>
+    <tr><td>Panel</td><td colspan="3">padding <code>28px</code>, radius <code>24px</code>, gap <code>20px</code>. Unchanged.</td></tr>
+    <tr><td>Slide</td><td colspan="3">width <code>340px</code>, padding <code>20px</code>, image height <code>500px</code>. Unchanged.</td></tr>
+    <tr><td>Slides in view</td><td>about 2.7</td><td>about 2.2</td><td>1, with the edge of the next slide showing</td></tr>
+    <tr><td>Controls</td><td colspan="3"><code>40px</code> arrows, <code>8px</code> dots, gap <code>16px</code>. Unchanged.</td></tr>
+  </tbody>
+</table></div>
+<h3 class="sub-h">States</h3>
+<ul class="rule-list">
+  <li><strong>Arrow button:</strong> default Control/Background (#272744), hover Button/Hover (#8B6D9C), disabled Button/Disabled (#565656) at the first and last slide.</li>
+  <li><strong>Dot:</strong> active is Control/Background, inactive is Control/Inactive (#6B6E8C).</li>
+  <li><strong>Focus:</strong> <code>3px solid #272744</code> outline with <code>3px</code> offset on the buttons, the dots and the viewport (provisional, not in Figma).</li>
+</ul>
+
+<h3 class="sub-h">CSS Specifications</h3>
+<div class="table-scroll"><table class="spec-table" aria-label="Carousel CSS specifications">
+  <thead><tr><th scope="col">Part</th><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+  <tbody>
+    <tr><td>Panel</td><td>Size and layout</td><td>width <code>100%</code>, max <code>936px</code>, padding <code>28px</code>, <code>flex</code> column, gap <code>20px</code></td><td>-</td></tr>
+    <tr><td>Panel</td><td>Surface</td><td>background <code>#FFFFFF</code>, radius <code>24px</code>, <code>overflow: clip</code></td><td>Surface/Card</td></tr>
+    <tr><td>Page title</td><td>Type</td><td>Roboto Medium <code>12px / 16px</code>, <code>letter-spacing: .96px</code>, <code>#494D7E</code></td><td>Text/Secondary</td></tr>
+    <tr><td>Description</td><td>Type</td><td>Roboto Medium <code>20px / 28px</code>, <code>#272744</code></td><td>Text/Title</td></tr>
+    <tr><td>Viewport</td><td>Layout</td><td><code>display: flex</code>, gap <code>16px</code>, <code>overflow-x: auto</code>, <code>scroll-snap-type: x mandatory</code></td><td>-</td></tr>
+    <tr><td>Slide</td><td>Size and layout</td><td>width <code>340px</code> (<code>flex: 0 0 340px</code>), padding <code>20px</code>, <code>flex</code> column, gap <code>12px</code>, stretch to the tallest slide</td><td>-</td></tr>
+    <tr><td>Slide</td><td>Surface</td><td>background <code>#FBF5EF</code>, radius <code>16px</code>, <code>scroll-snap-align: start</code></td><td>Surface/Card Alt</td></tr>
+    <tr><td>Slide title</td><td>Type</td><td>Roboto Bold <code>16px / 24px</code>, <code>#272744</code></td><td>Text/Title</td></tr>
+    <tr><td>Slide text</td><td>Type</td><td>Roboto Regular <code>16px / 28px</code>, <code>#000000</code></td><td>Text/Primary</td></tr>
+    <tr><td>Slide image</td><td>Size</td><td>full width, height <code>500px</code>, padding <code>12px</code>, radius <code>20px</code></td><td>Image/Orange, Image/Pink</td></tr>
+    <tr><td>Image label</td><td>Type</td><td>Roboto Medium <code>14px / 21px</code>, centered, <code>#272744</code></td><td>Text/Title</td></tr>
+    <tr><td>Controls row</td><td>Layout</td><td><code>flex</code>, centered, gap <code>16px</code></td><td>-</td></tr>
+    <tr><td>Arrow button</td><td>Size</td><td><code>40px</code> by <code>40px</code>, radius <code>20px</code>, glyph Roboto Medium <code>24px / 28px</code></td><td>-</td></tr>
+    <tr><td>Arrow button</td><td>Color</td><td>background <code>#272744</code>, glyph <code>#FBF5EF</code></td><td>Control/Background, Text/On Nav</td></tr>
+    <tr><td>Dots</td><td>Size</td><td><code>8px</code> by <code>8px</code>, radius <code>4px</code>, gap <code>8px</code></td><td>-</td></tr>
+    <tr><td>Dots</td><td>Color</td><td>active <code>#272744</code>, inactive <code>#6B6E8C</code></td><td>Control/Background, Control/Inactive</td></tr>
+    <tr><td>Motion</td><td>Transition</td><td>smooth scroll, button background <code>.15s</code>. Both turn off under <code>prefers-reduced-motion</code></td><td>-</td></tr>
+  </tbody>
+</table></div>
+<p class="provisional"><strong>Not in Figma:</strong> hover on the arrows, the disabled style, the focus outline, the 44px tap area, and the layout of the track on narrow screens (it just scrolls).</p>
+
+<h4 class="code-title">CSS</h4>
+<pre class="code-block" tabindex="0" aria-label="Carousel CSS"><code>.carousel {
+  display: flex; flex-direction: column; gap: 20px;
+  width: 100%; max-width: 936px; padding: 28px;
+  background: var(--surface-card); border-radius: 24px; overflow: clip;
+}
+.carousel__eyebrow { margin: 0; font: 500 12px/16px 'Roboto', sans-serif; letter-spacing: .96px; color: var(--text-secondary); }
+.carousel__title   { margin: 0; font: 500 20px/28px 'Roboto', sans-serif; color: var(--text-title); }
+
+.carousel__viewport {
+  display: flex; gap: 16px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+}
+.carousel__slide {
+  flex: 0 0 340px; display: flex; flex-direction: column; gap: 12px; padding: 20px;
+  background: var(--surface-card-alt); border-radius: 16px; scroll-snap-align: start;
+}
+.carousel__slide-title { margin: 0; font: 700 16px/24px 'Roboto', sans-serif; color: var(--text-title); }
+.carousel__slide-text  { margin: 0; font: 400 16px/28px 'Roboto', sans-serif; color: var(--text-primary); }
+.carousel__media {
+  display: flex; align-items: center; justify-content: center;
+  height: 500px; padding: 12px; border-radius: 20px; overflow: clip;
+  background: var(--image-orange); color: var(--text-title);
+  font: 500 14px/21px 'Roboto', sans-serif; text-align: center;
+}
+
+.carousel__controls { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.carousel__btn {
+  position: relative; display: grid; place-items: center; width: 40px; height: 40px;
+  border: 0; border-radius: 20px; cursor: pointer;
+  background: var(--control-background); color: var(--text-on-nav);
+  font: 500 24px/28px 'Roboto', sans-serif;
+}
+.carousel__btn::after { content: ""; position: absolute; inset: -2px; }  /* 44px target */
+.carousel__btn:hover { background: var(--button-hover); }
+.carousel__btn[aria-disabled="true"] { background: var(--button-disabled); cursor: not-allowed; }
+.carousel__btn:focus-visible,
+.carousel__dot:focus-visible { outline: 3px solid var(--border-outline); outline-offset: 3px; }
+.carousel__dots { display: flex; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.carousel__dot { position: relative; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 4px; background: var(--control-inactive); }
+.carousel__dot[aria-current="true"] { background: var(--control-background); }
+
+@media (prefers-reduced-motion: reduce) { .carousel__viewport { scroll-behavior: auto; } }</code></pre>
+<h4 class="code-title">JavaScript behavior</h4>
+<ul class="rule-list">
+  <li>Previous and next scroll the viewport by one slide. The dots scroll to their slide.</li>
+  <li>The arrow keys scroll one slide when the viewport has focus.</li>
+  <li>The active dot, the disabled state of the arrows, and a hidden "Slide 2 of 5" status message update as the track scrolls. See <code>js/carousel.js</code>.</li>
+  <li>There is no autoplay.</li>
+</ul>
+
+<h3 class="sub-h divided">Accessibility</h3>
+<ul class="rule-list">
+  <li><strong>Roles:</strong> the panel is a <code>&lt;section&gt;</code> with <code>aria-roledescription="carousel"</code> and a name from its heading (<code>aria-labelledby</code>). Each slide is <code>role="group"</code> with <code>aria-roledescription="slide"</code> and a label such as "2 of 5".</li>
+  <li><strong>Buttons:</strong> the arrows and dots are real <code>&lt;button&gt;</code> elements. The arrow glyphs are <code>aria-hidden</code>, and the buttons are named "Previous slide" and "Next slide". Each dot is named "Go to slide 3" and the active one has <code>aria-current="true"</code>.</li>
+  <li><strong>Disabled arrows:</strong> use <code>aria-disabled="true"</code> instead of the <code>disabled</code> attribute, so keyboard focus is not lost when the user reaches the end.</li>
+  <li><strong>Keyboard:</strong> Tab reaches the viewport, the arrows and the dots in reading order. Enter or Space activates a button. Left and Right arrow keys move between slides when the viewport has focus. The viewport has <code>tabindex="0"</code> so keyboard users can scroll it, and a visible focus outline.</li>
+  <li><strong>No autoplay:</strong> moving content that starts by itself must have a pause button (WCAG 2.2.2). This design has none, so never add autoplay without one.</li>
+  <li><strong>Announcements:</strong> a polite live region says "Slide 2 of 5" when the slide changes. Don't put <code>aria-live</code> on the track itself, because it would read every slide.</li>
+  <li><strong>Contrast:</strong> arrow glyph (Text/On Nav) on Control/Background is 13.29:1. Slide text is 19.41:1 on Surface/Card Alt. Dots are UI shapes and need 3:1: the inactive dot is 4.96:1 on white and the active dot is 14.38:1.</li>
+  <li><strong>Not by color alone:</strong> the active dot differs from the others only by color, and the two dots are about 2.9:1 apart. The "Slide 2 of 5" message and <code>aria-current</code> cover screen readers. For sighted users, consider making the active dot wider (a design decision).</li>
+  <li><strong>Target size:</strong> the arrows are 40px in Figma, and an invisible 2px extension gives 44 by 44px. The dots are 8px, so each one has a 20 by 32px hit area. That meets WCAG 2.2 (24px minimum) when the spacing is included.</li>
+  <li><strong>Images:</strong> real slide images need alt text that says what the screen shows. A pure placeholder uses <code>role="img"</code> and an <code>aria-label</code>.</li>
+  <li><strong>Touch and motion:</strong> swiping works because the track scrolls natively. Smooth scrolling and the button transition turn off when the user prefers reduced motion.</li>
+  <li><strong>Hidden slides:</strong> every slide stays in the page, so screen reader users can read all of them in order and don't need the controls to reach content.</li>
+</ul>
+
+<section class="dd" aria-labelledby="dd-title">
+<h2 id="dd-title">Do's and Don'ts</h2>
+<div class="dd-grid">
+<div class="dd-col do"><h3><span aria-hidden="true">✓</span> Do</h3><ul class="rule-list">
+  <li>Use one dot for each slide.</li>
+  <li>Let the user control the movement. Snap to a slide.</li>
+  <li>Keep slide titles short and write alt text for every image.</li>
+  <li>Keep slides the same width and the same image height.</li>
+  <li>Show part of the next slide so people see that there is more.</li>
+</ul></div>
+<div class="dd-col dont"><h3><span aria-hidden="true">✕</span> Don't</h3><ul class="rule-list">
+  <li>Don't autoplay or loop forever.</li>
+  <li>Don't hide important content only in later slides.</li>
+  <li>Don't remove the focus outline on the buttons or the track.</li>
+  <li>Don't use the arrows without accessible names.</li>
+  <li>Don't put a carousel inside another carousel.</li>
+</ul></div>
+</div></section>
+    <nav class="pager" aria-label="Page navigation">
+      <a class="pager__link pager__link--prev" href="card.html" rel="prev"><span class="pager__dir">&larr; Previous</span><span class="pager__name">Card</span></a>
+      <a class="pager__link pager__link--next" href="image-grid.html" rel="next"><span class="pager__dir">Next &rarr;</span><span class="pager__name">Image Grid</span></a>
+    </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p>&copy; November 2026 Justin Myers. Design II.</p></div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script src="../js/view-toggle.js"></script>
+</body>
+</html>

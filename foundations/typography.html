@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typography | Foundations | Design System</title>
+  <link rel="icon" href="../images/Favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/foundations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html" aria-label="Design System home">
+        <img src="../images/color.svg" alt="">
+        <span>Design System</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li class="nav-item">
+            <button class="nav-btn current" aria-expanded="false" aria-controls="menu-foundations">Foundations</button>
+            <ul class="menu" id="menu-foundations">
+              <li><a href="../foundations/color-palette.html">Color Palette</a></li>
+              <li><a href="../foundations/typography.html" aria-current="page">Typography</a></li>
+              <li><a href="../foundations/logo.html">Logo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-components">Components</button>
+            <ul class="menu" id="menu-components">
+              <li><a href="../components/card.html">Card</a></li>
+              <li><a href="../components/carousel.html">Carousel</a></li>
+              <li><a href="../components/image-grid.html">Image Grid</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-patterns">Page Patterns</button>
+            <ul class="menu" id="menu-patterns">
+              <li><a href="../patterns/index.html">BeeFriendly Case Study</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title"><h1>Foundations</h1></div>
+  <nav class="subnav" aria-label="Foundations pages">
+    <ul>
+      <li><a href="color-palette.html">Color Palette</a></li>
+      <li><a href="typography.html" aria-current="page">Typography</a></li>
+      <li><a href="logo.html">Logo</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <div class="content">
+<h2>Typography</h2>
+<p class="lead">One typeface, Roboto, in fourteen presets. Pick the preset that matches the job. Don't set size or weight by hand.</p>
+<h3 class="sub-h">Type Presets</h3>
+<ul class="type-list">
+<li><div><h3>Heading 1</h3><p class="spec">Roboto Bold · 32px / 120%</p><p class="use">Page titles, such as the "Foundations" title bar. One per page.</p></div><p class="sample-text t-h1">Foundations</p></li>
+<li><div><h3>Heading 2</h3><p class="spec">Roboto Bold · 24px / 120%</p><p class="use">Main section headings.</p></div><p class="sample-text t-h2">Color Breakdown</p></li>
+<li><div><h3>Heading 3</h3><p class="spec">Roboto Bold · 20px / 130%</p><p class="use">Sub-sections inside a section, and persona names.</p></div><p class="sample-text t-h3">Primitives</p></li>
+<li><div><h3>Card Title</h3><p class="spec">Roboto Bold · 28px / 130%</p><p class="use">The large title at the top of a feature card.</p></div><p class="sample-text t-card">Case Study Overview</p></li>
+<li><div><h3>Subheading</h3><p class="spec">Roboto Bold · 18px / 140%</p><p class="use">Labels that introduce a group of fields or a list.</p></div><p class="sample-text t-sub">Research Findings</p></li>
+<li><div><h3>Paragraph</h3><p class="spec">Roboto Regular · 16px / 160%</p><p class="use">Body text. Use Text/Primary or Text/Title.</p></div><p class="sample-text t-p">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
+<li><div><h3>Link</h3><p class="spec">Roboto Light · 16px / 150%</p><p class="use">Inline links. Keep the underline, because the light weight is thin.</p></div><p class="sample-text"><a class="t-link" href="#" onclick="return false">View the full case study</a></p></li>
+<li><div><h3>Navigation</h3><p class="spec">Roboto Regular · 24px / 130%</p><p class="use">Top-level navigation items.</p></div><p class="sample-text t-nav">Components</p></li>
+<li><div><h3>Menu Option</h3><p class="spec">Roboto Regular · 18px / 140%</p><p class="use">Items inside dropdown menus and the sub navigation.</p></div><p class="sample-text t-menu">Color Palette</p></li>
+<li><div><h3>Filter Tag Text</h3><p class="spec">Roboto Medium · 20px / 130%</p><p class="use">Filter tags on desktop.</p></div><p class="sample-text t-filter">Research</p></li>
+<li><div><h3>Filter Tag Text Mobile</h3><p class="spec">Roboto Medium · 16px / 130%</p><p class="use">Filter tags below the tablet breakpoint.</p></div><p class="sample-text t-filter-m">Research</p></li>
+<li><div><h3>Button Text Small</h3><p class="spec">Roboto Bold · 14px / 130%</p><p class="use">Labels inside buttons.</p></div><p class="sample-text t-btn">View Project</p></li>
+<li><div><h3>Caption</h3><p class="spec">Roboto Regular · 12px / 140%</p><p class="use">Small notes and metadata. Use Text/Secondary.</p></div><p class="sample-text t-cap">Figure 1. Persona interview notes</p></li>
+<li><div><h3>Chip Label</h3><p class="spec">Roboto Bold · 12px / 130%</p><p class="use">Text inside chips and small labels.</p></div><p class="sample-text t-chip">Research</p></li>
+</ul>
+<h3 class="sub-h">Hierarchy in Use</h3>
+<p>Size and weight rank the content. The page title is the largest, then section headings, then card titles, with body text the quietest. This is the Information Card from the Card page, built only from presets.</p>
+<div class="hier">
+  <p class="t-cap" style="margin:0 0 4px;color:var(--text-accent);letter-spacing:.08em"><strong>CAPTION / EYEBROW</strong></p>
+  <p class="t-h2" style="margin:0 0 6px">Heading 2: section title</p>
+  <p class="t-sub" style="margin:0 0 6px;color:var(--text-secondary)">Subheading: introduces a group</p>
+  <p class="t-p" style="margin:0 0 10px">Paragraph: body copy at 16px with a 160% line height is comfortable to read in lines of about 60 characters.</p>
+  <a class="t-link" href="#" onclick="return false">Link: read the full study</a>
+</div>
+<h3 class="sub-h">Rules</h3>
+<ul class="rule-list">
+  <li><strong>Font:</strong> Roboto only, weights 300, 400, 500 and 700. Load them from Google Fonts with <code>font-display: swap</code>.</li>
+  <li><strong>Line height:</strong> the percent values above are unitless in CSS (120% becomes <code>line-height: 1.2</code>), so they scale with the font size.</li>
+  <li><strong>Tracking:</strong> 0% on every preset. The small eyebrow labels inside components add <code>letter-spacing: .96px</code> (0.08em at 12px). That is set by the component, not a preset.</li>
+  <li><strong>Sizes in components:</strong> a few components set exact line heights in pixels (for example the Persona Card text is 14px / 22px). Those come straight from Figma and are listed on each component page.</li>
+  <li><strong>Accessibility:</strong> use <code>rem</code> or <code>px</code> that still scales when the user zooms to 200%. Never go below 12px. Keep body lines to about 60 characters and use real heading levels (<code>h1</code> to <code>h3</code>) in order, even when the visual size differs.</li>
+</ul>
+<section class="dd" aria-labelledby="dd-title">
+<h2 id="dd-title">Do's and Don'ts</h2>
+<p class="lead">Body text must be easy to read, and every text color must pass WCAG AA (4.5:1 for normal text).</p>
+<div class="dd-grid">
+<div class="dd-col do"><h3><span aria-hidden="true">✓</span> Do</h3><ul>
+<li><div class="sample block"><p class="t-h2" style="margin-bottom:6px">Research Findings</p><p class="s-good-body">Use the presets. A section heading is Heading 2 and body copy is Paragraph.</p></div><span class="caption">Presets keep size, weight and line height consistent.</span></li>
+<li><div class="sample block"><p class="s-good-body">Keep body text at 16px, regular weight, with a 160% line height and lines no wider than about 60 characters.</p></div><span class="caption">Paragraph, Text/Primary on Surface/Card (21:1).</span></li>
+<li><div class="sample block on-page"><p class="s-good-body" style="color:var(--blue-purple)">Secondary text uses Text/Secondary and stays readable on the page background.</p></div><span class="caption">Text/Secondary on Surface/Page Background (5.62:1).</span></li>
+</ul></div>
+<div class="dd-col dont"><h3><span aria-hidden="true">✕</span> Don't</h3><ul>
+<li><div class="sample block"><p class="s-bad-font">Research Findings</p><p class="s-bad-body">A serif heading above Roboto body text.</p></div><span class="caption">Don't mix in another font. Roboto only.</span></li>
+<li><div class="sample block on-page"><p class="s-bad-hint">Figure 1. Hard to read at this contrast.</p></div><span class="caption">Hint Grey on Surface/Page Background is 3.51:1. It fails WCAG AA.</span></li>
+<li><div class="sample block"><p class="s-bad-stroke">Research</p></div><span class="caption">Don't add strokes to rescue low-contrast text. Fix the color (Muted Orange on White is 1.43:1).</span></li>
+<li><div class="sample block"><p class="s-bad-caps">Regular weight in all caps is harder to read</p></div><span class="caption">Don't set all caps in a regular weight. Use sentence case, or a bold preset.</span></li>
+</ul></div>
+</div></section>
+    <nav class="pager" aria-label="Page navigation">
+      <a class="pager__link pager__link--prev" href="color-palette.html" rel="prev"><span class="pager__dir">&larr; Previous</span><span class="pager__name">Color Palette</span></a>
+      <a class="pager__link pager__link--next" href="logo.html" rel="next"><span class="pager__dir">Next &rarr;</span><span class="pager__name">Logo</span></a>
+    </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p>&copy; November 2026 Justin Myers. Design II.</p></div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>

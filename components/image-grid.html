@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Grid | Components | Design System</title>
+  <link rel="icon" href="../images/Favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/foundations.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html" aria-label="Design System home">
+        <img src="../images/color.svg" alt="">
+        <span>Design System</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-foundations">Foundations</button>
+            <ul class="menu" id="menu-foundations">
+              <li><a href="../foundations/color-palette.html">Color Palette</a></li>
+              <li><a href="../foundations/typography.html">Typography</a></li>
+              <li><a href="../foundations/logo.html">Logo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn current" aria-expanded="false" aria-controls="menu-components">Components</button>
+            <ul class="menu" id="menu-components">
+              <li><a href="../components/card.html">Card</a></li>
+              <li><a href="../components/carousel.html">Carousel</a></li>
+              <li><a href="../components/image-grid.html" aria-current="page">Image Grid</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-patterns">Page Patterns</button>
+            <ul class="menu" id="menu-patterns">
+              <li><a href="../patterns/index.html">BeeFriendly Case Study</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title"><h1>Components</h1></div>
+  <nav class="subnav" aria-label="Components pages">
+    <ul>
+      <li><a href="card.html">Card</a></li>
+      <li><a href="carousel.html">Carousel</a></li>
+      <li><a href="image-grid.html" aria-current="page">Image Grid</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <div class="content">
+<h2>Image Grid</h2>
+<p class="lead">An image grid lays out several pictures in a tidy set of rows. It has four layouts, and each one adapts to desktop, tablet and mobile.</p>
+
+<h3 class="sub-h">Layouts</h3>
+<div role="group" aria-label="Device size" class="view-toggle">
+  <button type="button" data-view-target="desktop" aria-pressed="true">Desktop</button>
+  <button type="button" data-view-target="tablet" aria-pressed="false">Tablet</button>
+  <button type="button" data-view-target="mobile" aria-pressed="false">Mobile</button>
+</div>
+<p class="view-note">Switch the device to see the grid change. It follows the width of its container, not the window.</p>
+<div class="image-grid-frame" data-frame style="max-width:936px">
+  <h4 class="code-title">2x2 (4 images)</h4>
+  <ul class="image-grid ">
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 1">Image 1</li>
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 2">Image 2</li>
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 3">Image 3</li>
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 4">Image 4</li>
+  </ul>
+  <h4 class="code-title">Two across</h4>
+  <ul class="image-grid image-grid--two-across">
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 1">Image 1</li>
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 2">Image 2</li>
+  </ul>
+  <h4 class="code-title">Two across short</h4>
+  <ul class="image-grid image-grid--two-across-short">
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 1">Image 1</li>
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 2">Image 2</li>
+  </ul>
+  <h4 class="code-title">Four across</h4>
+  <ul class="image-grid image-grid--four-across">
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 1">Image 1</li>
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 2">Image 2</li>
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 3">Image 3</li>
+        <li class="image-grid__item" role="img" aria-label="Placeholder image 4">Image 4</li>
+  </ul>
+</div>
+
+<h3 class="sub-h">Anatomy</h3>
+<ol class="anatomy">
+  <li><strong>Grid</strong>: a list of images laid out in columns with an even gap.</li>
+  <li><strong>Image tile</strong>: a rounded box. In Figma the tiles are placeholders filled with Image/Orange, Image/Pink, Surface/Card Alt and Surface/Card, in that order.</li>
+  <li><strong>Label</strong>: the placeholder name, Bold 14px, centered. A real tile holds a photo instead.</li>
+</ol>
+
+<h3 class="sub-h">Layout Sizes</h3>
+<p>All sizes come from Figma. Tile height follows the width through <code>aspect-ratio</code>, so tiles scale with the container.</p>
+<div class="table-scroll"><table class="spec-table" aria-label="Image grid sizes">
+  <thead><tr><th scope="col">Layout</th><th scope="col">Desktop (936px)</th><th scope="col">Tablet (810px)</th><th scope="col">Mobile (416px)</th><th scope="col">Ratio</th></tr></thead>
+  <tbody>
+    <tr><td>2x2</td><td>2 columns, 456 by 283</td><td>2 columns, 393 by 244</td><td>1 column, 416 by 258</td><td><code>456 / 283</code></td></tr>
+    <tr><td>Two across</td><td>2 columns, 456 by 342</td><td>2 columns, 393 by 295</td><td>1 column, 416 by 312</td><td><code>456 / 342</code></td></tr>
+    <tr><td>Two across short</td><td>2 columns, 456 by 283</td><td>2 columns, 393 by 244</td><td>1 column, 416 by 258</td><td><code>456 / 283</code></td></tr>
+    <tr><td>Four across</td><td>4 columns, 216 by 443</td><td>4 columns, 184 by 377</td><td>2 columns, 200 by 410</td><td><code>216 / 443</code></td></tr>
+  </tbody>
+</table></div>
+
+<h3 class="sub-h">CSS Specifications</h3>
+<div class="table-scroll"><table class="spec-table" aria-label="Image grid CSS specifications">
+  <thead><tr><th scope="col">Part</th><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+  <tbody>
+    <tr><td>Grid</td><td>Layout</td><td><code>display: grid</code>, columns <code>repeat(var(--cols), 1fr)</code>, width <code>100%</code></td><td>-</td></tr>
+    <tr><td>Grid</td><td>Max width</td><td>desktop <code>936px</code>, tablet <code>810px</code>, mobile <code>416px</code></td><td>-</td></tr>
+    <tr><td>Grid</td><td>Gap</td><td>desktop and tablet <code>24px</code>, mobile <code>16px</code></td><td>-</td></tr>
+    <tr><td>Grid</td><td>Columns</td><td><code>2</code> for 2x2, Two across, Two across short. <code>4</code> for Four across. On mobile <code>1</code> and <code>2</code></td><td>-</td></tr>
+    <tr><td>Tile</td><td>Size</td><td>width from the column, height from <code>aspect-ratio</code> (see the table above)</td><td>-</td></tr>
+    <tr><td>Tile</td><td>Shape</td><td>radius <code>16px</code>, padding <code>12px</code>, <code>overflow: clip</code></td><td>-</td></tr>
+    <tr><td>Tile 1</td><td>Fill</td><td><code>#F2D3AB</code></td><td>Image/Orange</td></tr>
+    <tr><td>Tile 2</td><td>Fill</td><td><code>#C69FA5</code></td><td>Image/Pink</td></tr>
+    <tr><td>Tile 3</td><td>Fill</td><td><code>#FBF5EF</code></td><td>Surface/Card Alt</td></tr>
+    <tr><td>Tile 4</td><td>Fill</td><td><code>#FFFFFF</code></td><td>Surface/Card</td></tr>
+    <tr><td>Label</td><td>Type</td><td>Roboto Bold <code>14px / 1.3</code>, centered, <code>#272744</code></td><td>Button Text Small, Text/Title</td></tr>
+    <tr><td>Photo</td><td>Fit</td><td><code>width: 100%; height: 100%; object-fit: cover</code></td><td>-</td></tr>
+  </tbody>
+</table></div>
+<p class="provisional"><strong>Not in Figma:</strong> the breakpoints. The grid reads its container width: 900px and up is desktop, 600 to 899px is tablet, and under 600px is mobile. These are provisional.</p>
+
+<h4 class="code-title">CSS</h4>
+<pre class="code-block" tabindex="0" aria-label="Image Grid CSS"><code>.image-grid-frame { container-type: inline-size; }
+
+.image-grid {
+  --cols: 2;
+  --gap: 24px;
+  --ratio: 456 / 283;                  /* 2x2 and Two across short */
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: var(--gap);
+  width: 100%;
+  max-width: 936px;
+  margin: 0; padding: 0; list-style: none;
+}
+.image-grid--two-across       { --ratio: 456 / 342; }
+.image-grid--two-across-short { --ratio: 456 / 283; }
+.image-grid--four-across      { --cols: 4; --ratio: 216 / 443; }
+
+.image-grid__item {
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: var(--ratio);
+  padding: 12px; border-radius: 16px; overflow: clip;
+  background: var(--image-orange);               /* #F2D3AB */
+  color: var(--text-title);
+  font: 700 14px/1.3 'Roboto', sans-serif; text-align: center;
+}
+.image-grid__item:nth-child(2) { background: var(--image-pink); }       /* #C69FA5 */
+.image-grid__item:nth-child(3) { background: var(--surface-card-alt); } /* #FBF5EF */
+.image-grid__item:nth-child(4) { background: var(--surface-card); }     /* #FFFFFF */
+.image-grid__item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Tablet */
+@container (max-width: 899px) { .image-grid { max-width: 810px; } }
+/* Mobile */
+@container (max-width: 599px) {
+  .image-grid { --gap: 16px; --cols: 1; }
+  .image-grid--four-across { --cols: 2; }
+}</code></pre>
+<h4 class="code-title">HTML</h4>
+<pre class="code-block" tabindex="0" aria-label="Image Grid HTML"><code>&lt;div class="image-grid-frame"&gt;
+  &lt;ul class="image-grid"&gt;
+    &lt;li class="image-grid__item"&gt;&lt;img src="welcome.webp" alt="Welcome screen of the website"&gt;&lt;/li&gt;
+    &lt;li class="image-grid__item"&gt;&lt;img src="home.webp" alt="Home screen of the website"&gt;&lt;/li&gt;
+    &lt;li class="image-grid__item"&gt;&lt;img src="catalog.webp" alt="Catalog screen of the website"&gt;&lt;/li&gt;
+    &lt;li class="image-grid__item"&gt;&lt;img src="garden.webp" alt="Garden screen of the website"&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+<h3 class="sub-h divided">Accessibility</h3>
+<ul class="rule-list">
+  <li><strong>Structure:</strong> a grid of images is a list (<code>ul</code> with <code>li</code>), so a screen reader says "list, 4 items" and the user knows how many images there are.</li>
+  <li><strong>Alt text:</strong> every photo needs alt text that says what it shows, such as "Home screen of the website". If a caption is shown next to the image, use a <code>&lt;figure&gt;</code> with a <code>&lt;figcaption&gt;</code> and keep the alt short. Purely decorative images use <code>alt=""</code>. Placeholder tiles use <code>role="img"</code> with an <code>aria-label</code>.</li>
+  <li><strong>Reading order:</strong> the order in the HTML is the reading order. Don't use CSS <code>order</code> to change it. On mobile the 2x2 grid becomes one column, and the order stays Image 1 to Image 4.</li>
+  <li><strong>Contrast:</strong> the label Text/Title is 10.06:1 on Image/Orange, 6.10:1 on Image/Pink, 13.29:1 on Surface/Card Alt and 14.38:1 on Surface/Card. All pass. A tile edge needs 3:1 against the page: the white and cream tiles on Off White are about 1.4:1 and 1.3:1, so don't rely on the edge alone to show where an image ends. Real photos fill the tile, which solves this.</li>
+  <li><strong>Text in images:</strong> don't put important text inside a picture. If you must, repeat it in the alt text or a caption.</li>
+  <li><strong>Reflow:</strong> columns drop from 4 to 2 and from 2 to 1 with the container width, so nothing scrolls sideways at 320px and the layout works at 400% zoom.</li>
+  <li><strong>Interactive tiles:</strong> the grid itself is not interactive. If a tile opens a larger image, make it a real <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> with a name, a <code>3px solid #272744</code> focus outline and at least 44 by 44px size (provisional, not in Figma).</li>
+  <li><strong>Loading:</strong> set <code>width</code> and <code>height</code> or the aspect ratio so the page doesn't jump while images load, and use <code>loading="lazy"</code> for images below the first screen.</li>
+</ul>
+
+<section class="dd" aria-labelledby="dd-title">
+<h2 id="dd-title">Do's and Don'ts</h2>
+<div class="dd-grid">
+<div class="dd-col do"><h3><span aria-hidden="true">✓</span> Do</h3><ul class="rule-list">
+  <li>Use the same layout for images that belong together.</li>
+  <li>Crop photos to the tile with <code>object-fit: cover</code>.</li>
+  <li>Keep the gap equal in both directions.</li>
+  <li>Use Two across short when the images are wide, such as website screenshots.</li>
+  <li>Use Four across for tall images, such as phone screens.</li>
+</ul></div>
+<div class="dd-col dont"><h3><span aria-hidden="true">✕</span> Don't</h3><ul class="rule-list">
+  <li>Don't stretch an image out of its ratio.</li>
+  <li>Don't mix layouts in one grid.</li>
+  <li>Don't leave out the alt text.</li>
+  <li>Don't set a fixed pixel height on the tiles. Use the aspect ratio.</li>
+  <li>Don't use the Four across layout with more than four images in one row.</li>
+</ul></div>
+</div></section>
+    <nav class="pager" aria-label="Page navigation">
+      <a class="pager__link pager__link--prev" href="carousel.html" rel="prev"><span class="pager__dir">&larr; Previous</span><span class="pager__name">Carousel</span></a>
+      <a class="pager__link pager__link--next" href="../patterns/index.html" rel="next"><span class="pager__dir">Next &rarr;</span><span class="pager__name">BeeFriendly Case Study</span></a>
+    </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p>&copy; November 2026 Justin Myers. Design II.</p></div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/view-toggle.js"></script>
+</body>
+</html>

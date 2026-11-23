@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeeFriendly Case Study | Design System</title>
+  <link rel="icon" href="../images/Favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/foundations.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pattern.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html" aria-label="Design System home">
+        <img src="../images/color.svg" alt="">
+        <span>Design System</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-foundations">Foundations</button>
+            <ul class="menu" id="menu-foundations">
+              <li><a href="../foundations/color-palette.html">Color Palette</a></li>
+              <li><a href="../foundations/typography.html">Typography</a></li>
+              <li><a href="../foundations/logo.html">Logo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-components">Components</button>
+            <ul class="menu" id="menu-components">
+              <li><a href="../components/card.html">Card</a></li>
+              <li><a href="../components/carousel.html">Carousel</a></li>
+              <li><a href="../components/image-grid.html">Image Grid</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn current" aria-expanded="false" aria-controls="menu-patterns">Page Patterns</button>
+            <ul class="menu" id="menu-patterns">
+              <li><a href="../patterns/index.html" aria-current="page">BeeFriendly Case Study</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+<main id="main">
+  <section class="cs-title" aria-labelledby="page-h1">
+    <h1 id="page-h1">BeeFriendly Case Study</h1>
+    <p>2025 &nbsp;&middot;&nbsp; Team Project</p>
+  </section>
+
+  <section class="cs-section cs-hero" aria-label="Project cover">
+    <div class="cs-inner">
+      <div class="cs-cover cs-contain"><img src="../images/Beefriendly%20Images/cover.png" alt="BeeFriendly welcome screen on a phone, with a flower and bee illustration and a Get Started button"></div>
+      <a class="cs-btn" href="#prototype">View Prototype</a>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="details-h">
+    <div class="cs-inner">
+      <div class="cs-narrow">
+        <h2 id="details-h" class="cs-details-title">Details</h2>
+        <dl class="cs-details">
+          <div><dt>Role</dt><dd>UX Designer leading the app and the responsive website design from conception to delivery</dd></div>
+          <div><dt>Focus</dt><dd>Interviews, Paper &amp; Digital Wireframes, Lo- &amp; Hi-Fi Prototypes, Usability Studies, Accessibility, Information Architecture, Responsive Design</dd></div>
+          <div><dt>Platform</dt><dd>Mobile App &amp; Responsive Website</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-label="Summary">
+    <div class="cs-inner">
+      <p class="cs-callout">Home gardeners want to help the bees, but feel isolated and unsure if they're making the right choices.</p>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="overview-h">
+    <div class="cs-inner cs-stack-40">
+      <div class="cs-text">
+        <p class="cs-eyebrow">OVERVIEW</p>
+        <h2 id="overview-h">Overview</h2>
+        <p>Home gardeners who want to help the bee population may have a gap in their knowledge, tools, or confidence to make this change to their gardens. They may need help identifying which local plants are best for attracting bees and how to maintain a bee-friendly environment. They can feel overwhelmed and uncertain about what to do and if their choices are effective.</p>
+        <p>Our app aims to simplify the process by providing easy-to-understand guidance and actionable insights that help users not only transform their gardens but maintain them, inspiring, educating, and empowering users through collective knowledge and encouragement. To efficiently move the service into the prototype phase and begin testing, we adopted an iterative design approach.</p>
+      </div>
+      <div class="device-frame">
+        <section class="carousel" data-carousel aria-roledescription="carousel" aria-labelledby="car-title">
+          <p class="carousel__eyebrow">THE SOLUTION</p>
+          <h3 class="carousel__title" id="car-title">Guidance to build, and keep, a bee-friendly garden</h3>
+          <div class="carousel__viewport" tabindex="0" role="group" aria-label="Solution slides. Use the left and right arrow keys to move.">
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
+            <h3 class="carousel__slide-title">Welcome &amp; Onboarding</h3>
+            <p class="carousel__slide-text">A friendly start that sets one clear goal: create a garden that bees love. Users add their location, garden, and plants during setup.</p>
+            <div class="carousel__media  cs-contain"><img src="../images/Beefriendly%20Images/hifi-welcome.png" alt="High-fidelity welcome screen of the app" loading="lazy"></div>
+          </div>
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 5">
+            <h3 class="carousel__slide-title">Scan Your Garden</h3>
+            <p class="carousel__slide-text">The camera scanner identifies the plants already in your garden and analyzes how bee-friendly it is, with no manual entry needed.</p>
+            <div class="carousel__media carousel__media--pink cs-contain"><img src="../images/Beefriendly%20Images/hifi-scan.png" alt="High-fidelity scan screen of the app" loading="lazy"></div>
+          </div>
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 5">
+            <h3 class="carousel__slide-title">Your Garden at a Glance</h3>
+            <p class="carousel__slide-text">Home shows your bee-friendly score, daily care tasks, and local gardening communities to share progress with.</p>
+            <div class="carousel__media carousel__media--cream cs-contain"><img src="../images/Beefriendly%20Images/hifi-home.png" alt="High-fidelity home screen of the app" loading="lazy"></div>
+          </div>
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 5">
+            <h3 class="carousel__slide-title">Garden Analysis</h3>
+            <p class="carousel__slide-text">A garden analysis page shows how bee-friendly your garden is and what to improve first.</p>
+            <div class="carousel__media  cs-contain"><img src="../images/Beefriendly%20Images/hifi-analysis.png" alt="High-fidelity garden analysis screen of the app" loading="lazy"></div>
+          </div>
+          <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+            <h3 class="carousel__slide-title">Local Plant Catalog</h3>
+            <p class="carousel__slide-text">A catalog of local plants helps you learn which ones bees love and add them to your wish list.</p>
+            <div class="carousel__media carousel__media--pink cs-contain"><img src="../images/Beefriendly%20Images/hifi-catalog.png" alt="High-fidelity plant catalog screen of the app" loading="lazy"></div>
+          </div>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" type="button" data-carousel-prev aria-label="Previous slide"><span aria-hidden="true">&lsaquo;</span></button>
+            <ul class="carousel__dots">
+            <li><button class="carousel__dot" type="button" aria-label="Go to slide 1"></button></li>
+            <li><button class="carousel__dot" type="button" aria-label="Go to slide 2"></button></li>
+            <li><button class="carousel__dot" type="button" aria-label="Go to slide 3"></button></li>
+            <li><button class="carousel__dot" type="button" aria-label="Go to slide 4"></button></li>
+            <li><button class="carousel__dot" type="button" aria-label="Go to slide 5"></button></li>
+          </ul>
+            <button class="carousel__btn" type="button" data-carousel-next aria-label="Next slide"><span aria-hidden="true">&rsaquo;</span></button>
+          </div>
+          <p class="sr-only" role="status" aria-live="polite" data-carousel-status></p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="define-h">
+    <div class="cs-inner">
+      <div class="cs-text">
+        <p class="cs-eyebrow">DEFINE</p>
+        <h2 id="define-h">The Problem</h2>
+        <p>Many home gardeners are interested in making their gardens more bee-friendly but often feel isolated or unsure if they're making the right choices. They lack a supportive community where they can ask questions, share progress, exchange tips, or celebrate small wins. Without social motivation or peer feedback, their engagement and long-term commitment may decline.</p>
+        <h3>The Goal</h3>
+        <p>The goal of BeeFriendly is to help the user transform and maintain a bee-friendly garden. It suggests what plants they can add to their garden and helps them set up a schedule for the upkeep of their plants. BeeFriendly also has a catalog of plants that educates the user on local bee-friendly plants.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="research-h">
+    <div class="cs-inner cs-stack-32">
+      <div class="cs-text cs-narrow">
+        <p class="cs-eyebrow">RESEARCH</p>
+        <h2 id="research-h">User Research</h2>
+        <p>To guide our design decisions, we began by identifying our target user groups: neighbors, parents, and active or long-term community members. We then developed a standardized set of interview questions to establish a consistent baseline for our research.</p>
+        <p>With this framework in place, we conducted contextual inquiries with participants who fit our user profiles, observing their interactions and asking follow-up questions as they performed relevant tasks. Once all sessions were completed, we analyzed the raw data to extract key user characteristics and compile detailed activity notes.</p>
+        <p>From these insights, we developed user personas and scenarios that reflected real-life needs and behaviors, helping us map out user activities and inform the app's core features.</p>
+      </div>
+      <figure class="cs-figure">
+        <div class="cs-wide cs-auto"><img src="../images/Beefriendly%20Images/competitive-audit.png" alt="Competitive audit comparing Greenpeace, an indirect competitor, and The Bee Conservancy, a direct competitor: strengths, weaknesses and features of each" loading="lazy"></div>
+        <figcaption>Competitive audit of existing bee-conservation sites</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="ideate-h">
+    <div class="cs-inner cs-stack-32">
+      <div class="cs-text">
+        <p class="cs-eyebrow">IDEATE</p>
+        <h2 id="ideate-h">Design Charrette &amp; Mood Board</h2>
+        <p>As a team, we first established that this would be a two-channel service: a mobile app and a website, the channels most commonly used for apps and services like this. To brainstorm as many ideas as we could, we ran a charrette exercise where each of us quickly designed screens for the app and website. We then shared what we came up with and picked out the features and ideas we agreed were best for the service.</p>
+        <p>We also developed a mood board to capture the intended user experience. It guided the branding and visual feel of the service and served as inspiration for how the app would look.</p>
+      </div>
+      <div class="image-grid-frame">
+      <ul class="image-grid image-grid--two-across image-grid--photos" aria-label="Design charrette sketches">
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/paper-wireframes-1.png" alt="Paper sketches of app and website screens from the design charrette" loading="lazy"></li>
+        <li class="image-grid__item cs-contain"><img src="../images/Beefriendly%20Images/paper-wireframes-2.png" alt="Hand-drawn paper wireframes of the app home, plant details, products and tips pages" loading="lazy"></li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="empathize-h">
+    <div class="cs-inner cs-stack-32">
+      <div class="cs-text cs-narrow">
+        <p class="cs-eyebrow">EMPATHIZE</p>
+        <h2 id="empathize-h">Personas &amp; Scenarios</h2>
+      </div>
+      <div class="cs-personas">
+        <article class="persona-card">
+          <h3 class="persona-card__name">Lee Gliv &middot; Seattle</h3>
+          <p class="persona-card__text">A 32-year-old lab tech who loves gardening. It's his go-to weekend stress relief after a packed week managing lab duties and caring for his family. Lee is aware of the declining bee population and wants to make his garden more bee-friendly, but he has to go through too many websites, search multiple times, and has no clear guidance. After a colleague mentions BeeFriendly, he installs it, sets his location to Seattle, adds details about his garden, and gets recommendations for native bee-friendly plants.</p>
+          <div class="persona-card__media cs-auto"><img src="../images/Beefriendly%20Images/persona-lee.png" alt="Persona board for Lee Gliv, a 32-year-old lab tech in Seattle, with his goals, challenges, concerns and a quote" loading="lazy"></div>
+        </article>
+        <article class="persona-card">
+          <h3 class="persona-card__name">Emily Owens &middot; Chicago</h3>
+          <p class="persona-card__text">A 37-year-old software developer and passionate gardener. Scrolling through #savethebees reels in early spring, she's inspired but overwhelmed. Searching online for bee-friendly gardening floods her with so much advice she doesn't know where to start. She wants something clearer and more structured, so she downloads BeeFriendly and sets her location, garden type, garden size, and gardening expertise.</p>
+          <div class="persona-card__media cs-auto"><img src="../images/Beefriendly%20Images/persona-emily.png" alt="Persona board for Emily Owens, a 37-year-old software developer in Chicago, with her goals, challenges and concerns" loading="lazy"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="wire-h">
+    <div class="cs-inner cs-stack-32">
+      <div class="cs-text">
+        <p class="cs-eyebrow">DESIGN</p>
+        <h2 id="wire-h">Wireframes</h2>
+        <p>With the personas and scenarios established, we designed low-fidelity wireframes centered around the app's core features, making sure they aligned with the user needs identified during research. These were tested through usability sessions focused on key user flows to uncover pain points and areas of confusion, and the insights directly informed our design refinements.</p>
+      </div>
+      <div class="cs-wide cs-contain"><img src="../images/Beefriendly%20Images/lofi-wireframes.webp" alt="Low-fidelity wireframes of the app screens" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="midfi-h">
+    <div class="cs-inner cs-stack-32">
+      <div class="cs-text">
+        <p class="cs-eyebrow">DESIGN</p>
+        <h2 id="midfi-h">Mid-Fidelity</h2>
+        <p>After establishing the core user flows, we moved to mid-fidelity prototypes to refine layout, hierarchy, and interaction patterns. This allowed for more realistic usability testing and iterative improvements while keeping flexibility for design changes.</p>
+      </div>
+      <div class="image-grid-frame">
+      <ul class="image-grid image-grid--four-across image-grid--photos" aria-label="Mid-fidelity phone screens">
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/midfi-welcome.png" alt="Mid-fidelity welcome screen" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/midfi-signup.png" alt="Mid-fidelity sign-up screen" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/midfi-home.png" alt="Mid-fidelity home screen" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/midfi-local-plants.png" alt="Mid-fidelity local plants screen" loading="lazy"></li>
+      </ul>
+      </div>
+      <div class="image-grid-frame">
+      <ul class="image-grid image-grid--two-across-short image-grid--photos" aria-label="Mid-fidelity website pages">
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/midfi-web-welcome.png" alt="Mid-fidelity website welcome page" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/midfi-web-garden.png" alt="Mid-fidelity website garden page" loading="lazy"></li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="test-h">
+    <div class="cs-inner">
+      <div class="cs-text">
+        <p class="cs-eyebrow">TEST</p>
+        <h2 id="test-h">Usability Test</h2>
+        <p>The goal of the usability test was to find out how usable the app's features are. It was conducted on the mid-fidelity prototype with people who have a garden and want to make it bee-friendly. To keep each session consistent, we created a set of guidelines so the team could compare results and find common pain points.</p>
+        <h3>Tasks</h3>
+        <ul>
+          <li>Purchase a plant</li>
+          <li>Create an account and complete the garden onboarding</li>
+          <li>Add a plant to the garden</li>
+          <li>Create a task for maintaining the garden</li>
+        </ul>
+        <h3>Findings &amp; Recommendations</h3>
+        <p>Once testing was complete, we grouped the results and identified the key issues affecting the user flow. Here's what we found and how we resolved each one.</p>
+      </div>
+      <div class="cs-findings">
+      <article class="info-card">
+        <p class="info-card__eyebrow">01</p>
+        <h3 class="info-card__title">Unnecessary information on account creation</h3>
+        <p class="info-card__body"><strong>Finding:</strong> Users thought garden size by square feet was unnecessary, and many didn't know why it mattered.<br><strong>Recommendation:</strong> Removed this screen so users aren't confused by details they found unnecessary.</p>
+      </article>
+      <article class="info-card">
+        <p class="info-card__eyebrow">02</p>
+        <h3 class="info-card__title">Easier account setup with the garden</h3>
+        <p class="info-card__body"><strong>Finding:</strong> Users wanted an easy way to add plants to their garden while creating an account.<br><strong>Recommendation:</strong> Added plant setup to account creation, with a camera scanner to identify plants in their garden.</p>
+      </article>
+      <article class="info-card">
+        <p class="info-card__eyebrow">03</p>
+        <h3 class="info-card__title">Confusing navigation</h3>
+        <p class="info-card__body"><strong>Finding:</strong> Users were confused about what the bottom nav bar buttons do.<br><strong>Recommendation:</strong> Labeled the buttons to support the user flow.</p>
+      </article>
+      <article class="info-card">
+        <p class="info-card__eyebrow">04</p>
+        <h3 class="info-card__title">Page flow after account setup</h3>
+        <p class="info-card__body"><strong>Finding:</strong> Users were unsure why they landed on a news and tasks page instead of their garden.<br><strong>Recommendation:</strong> Created a garden analysis page showing how bee-friendly their garden is, and moved news elsewhere in the app.</p>
+      </article>
+      <article class="info-card">
+        <p class="info-card__eyebrow">05</p>
+        <h3 class="info-card__title">Task notification clarifications</h3>
+        <p class="info-card__body"><strong>Finding:</strong> Users were unsure how the app would remind them of their tasks.<br><strong>Recommendation:</strong> Added a section to set up push notifications for tasks.</p>
+      </article>
+      <article class="info-card">
+        <p class="info-card__eyebrow">06</p>
+        <h3 class="info-card__title">Custom tasks</h3>
+        <p class="info-card__body"><strong>Finding:</strong> Users were unsure what to do when the task they wanted wasn't an option.<br><strong>Recommendation:</strong> Added a way to type in a custom task.</p>
+      </article>
+      <article class="info-card">
+        <p class="info-card__eyebrow">07</p>
+        <h3 class="info-card__title">App location</h3>
+        <p class="info-card__body"><strong>Finding:</strong> Users wanted to add their location during sign-up and see it in the app.<br><strong>Recommendation:</strong> Onboarding now lets users enter their location or use GPS, and it's displayed on the garden and catalog pages.</p>
+      </article>
+      <article class="info-card">
+        <p class="info-card__eyebrow">08</p>
+        <h3 class="info-card__title">Local plants</h3>
+        <p class="info-card__body"><strong>Finding:</strong> Users wanted to wishlist or learn more about plants in their local area.<br><strong>Recommendation:</strong> Replaced the shop page with a catalog of local plants they can learn from.</p>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="hifi-h" id="prototype">
+    <div class="cs-inner cs-stack-24">
+      <div class="cs-text">
+        <p class="cs-eyebrow">PROTOTYPE</p>
+        <h2 id="hifi-h">High-Fidelity Prototype</h2>
+        <p>The high-fidelity prototype simulates the final experience with visuals, interactive elements, and the full user flow. It let us communicate the design vision to stakeholders and the team before development, and make sure the design aligns with the app's goal of helping users create a more bee-friendly garden.</p>
+      </div>
+      <a class="cs-btn" href="#prototype">View Prototype</a>
+      <h3 class="cs-label">Mobile</h3>
+      <div class="image-grid-frame">
+      <ul class="image-grid image-grid--four-across image-grid--photos" aria-label="High-fidelity phone screens">
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/hifi-home.png" alt="High-fidelity home screen" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/hifi-analysis.png" alt="High-fidelity garden analysis screen" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/hifi-my-plants.png" alt="High-fidelity my plants screen" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/hifi-catalog.png" alt="High-fidelity catalog screen" loading="lazy"></li>
+      </ul>
+      </div>
+      <h3 class="cs-label">Web</h3>
+      <div class="image-grid-frame">
+      <ul class="image-grid image-grid--photos" aria-label="High-fidelity website pages">
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/hifi-web-welcome.webp" alt="High-fidelity website welcome page" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/hifi-web-home.webp" alt="High-fidelity website home page" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/hifi-web-catalog.webp" alt="High-fidelity website catalog page" loading="lazy"></li>
+        <li class="image-grid__item"><img src="../images/Beefriendly%20Images/hifi-web-garden.webp" alt="High-fidelity website garden page" loading="lazy"></li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="reflect-h">
+    <div class="cs-inner">
+      <div class="cs-text">
+        <p class="cs-eyebrow">REFLECT</p>
+        <h2 id="reflect-h">Impact</h2>
+        <p>By empowering individuals to create and maintain bee-friendly gardens, the app supports local ecosystems, strengthens pollinator populations, and fosters environmental stewardship. Through education, community engagement, and actionable guidance, it turns everyday gardeners into contributors to biodiversity and sustainable living. As more people participate, neighborhoods become greener and more resilient, one garden at a time.</p>
+        <h3>What I learned</h3>
+        <p>This project gave me hands-on experience across user-centered design, from contextual inquiries and personas to wireframes and usability tests. I learned the importance of iterating on real user feedback and how collaborative problem-solving leads to more effective, user-friendly solutions.</p>
+        <h3>Next steps</h3>
+        <ul>
+          <li>Enhance AI suggestions for your garden.</li>
+          <li>Research how the app is helping people improve their gardens.</li>
+          <li>Expand community interaction to foster a deeper sense of community.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" aria-labelledby="more-h">
+    <div class="cs-inner cs-stack-32">
+      <div class="cs-more-head">
+        <h2 id="more-h">More projects</h2>
+        <span class="cs-more-all">View all</span>
+      </div>
+      <ul class="cs-projects">
+        <li><p><strong>Plant Care Tracker, </strong>MCP App</p></li>
+        <li><p><strong>Type Hierarchies, </strong>Design II</p></li>
+        <li><p><strong>Pixel Art Layouts, </strong>Bootstrap</p></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="cs-footer">
+  <div class="cs-footer__inner">
+    <p>&copy; November 2026 Justin Myers.</p>
+    <ul>
+      <li><a href="#">Email</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/carousel.js"></script>
+  <script src="../js/lightbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card | Components | Design System</title>
+  <link rel="icon" href="../images/Favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/foundations.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html" aria-label="Design System home">
+        <img src="../images/color.svg" alt="">
+        <span>Design System</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-foundations">Foundations</button>
+            <ul class="menu" id="menu-foundations">
+              <li><a href="../foundations/color-palette.html">Color Palette</a></li>
+              <li><a href="../foundations/typography.html">Typography</a></li>
+              <li><a href="../foundations/logo.html">Logo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn current" aria-expanded="false" aria-controls="menu-components">Components</button>
+            <ul class="menu" id="menu-components">
+              <li><a href="../components/card.html" aria-current="page">Card</a></li>
+              <li><a href="../components/carousel.html">Carousel</a></li>
+              <li><a href="../components/image-grid.html">Image Grid</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <button class="nav-btn" aria-expanded="false" aria-controls="menu-patterns">Page Patterns</button>
+            <ul class="menu" id="menu-patterns">
+              <li><a href="../patterns/index.html">BeeFriendly Case Study</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title"><h1>Components</h1></div>
+  <nav class="subnav" aria-label="Components pages">
+    <ul>
+      <li><a href="card.html" aria-current="page">Card</a></li>
+      <li><a href="carousel.html">Carousel</a></li>
+      <li><a href="image-grid.html">Image Grid</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <div class="content">
+<h2>Card</h2>
+<p class="lead">Cards group one idea on a white surface. There are two: the Information Card for a short block of text, and the Persona Card for a person with a picture.</p>
+
+<h3 class="sub-h">Card Types</h3>
+<div role="group" aria-label="Device size" class="view-toggle">
+  <button type="button" data-view-target="desktop" aria-pressed="true">Desktop</button>
+  <button type="button" data-view-target="tablet" aria-pressed="false">Tablet</button>
+  <button type="button" data-view-target="mobile" aria-pressed="false">Mobile</button>
+</div>
+<p class="view-note">Switch the device to see the layout change. It follows the width of its frame (936px, 810px or 416px), not the window.</p>
+
+<div class="variant">
+  <h3>Information Card</h3>
+  <p><strong>Used for:</strong> a short block of information under a heading, such as a finding or a summary. It has a small eyebrow label, a title and body text.</p>
+  <div class="demo-stage device-frame" data-frame style="max-width:936px"><article class="info-card">
+    <p class="info-card__eyebrow">Small title</p>
+    <h4 class="info-card__title">Title</h4>
+    <p class="info-card__body">lorem ipsum dolor sit amet consectetur adipiscing elit minus officia deserunt consequatur soluta omnis anim qui repellendus illum proident placeat duis ut do laboris assumenda animi facilis accusamus deserunt fuga dolor cillum qui aut est omnis qui sint veniam dolor omnis mollitia velit distinctio eum sunt quod aut veniam in</p>
+  </article></div>
+  <h4 class="code-title">Anatomy</h4>
+  <ol class="anatomy">
+    <li><strong>Container</strong>: white card with rounded corners.</li>
+    <li><strong>Small title</strong>: an eyebrow label in Chip Label style with wide letter spacing, in Text/Accent.</li>
+    <li><strong>Title</strong>: Medium weight 18px, Text/Title.</li>
+    <li><strong>Body</strong>: Regular 16px, Text/Title.</li>
+  </ol>
+  <h4 class="code-title">CSS Specifications</h4>
+  <div class="table-scroll"><table class="spec-table" aria-label="Information Card CSS specifications">
+    <thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+    <tbody>
+      <tr><td>Width</td><td><code>100%</code>, max <code>637px</code>. Height follows the content.</td><td>-</td></tr>
+      <tr><td>Display</td><td><code>flex</code>, <code>flex-direction: column</code>, gap <code>8px</code></td><td>-</td></tr>
+      <tr><td>Padding</td><td><code>20px</code> on all sides</td><td>-</td></tr>
+      <tr><td>Background</td><td><code>#FFFFFF</code></td><td>Surface/Card</td></tr>
+      <tr><td>Radius</td><td><code>16px</code>, <code>overflow: clip</code></td><td>-</td></tr>
+      <tr><td>Border and shadow</td><td>none</td><td>-</td></tr>
+      <tr><td>Small title</td><td>Roboto Bold <code>12px / 16px</code>, <code>letter-spacing: .96px</code>, <code>#8B6D9C</code></td><td>Chip Label, Text/Accent</td></tr>
+      <tr><td>Title</td><td>Roboto Medium <code>18px / 26px</code>, <code>#272744</code></td><td>Text/Title</td></tr>
+      <tr><td>Body</td><td>Roboto Regular <code>16px / 24px</code>, <code>#272744</code></td><td>Paragraph, Text/Title</td></tr>
+      <tr><td>Text wrapping</td><td><code>overflow-wrap: break-word</code></td><td>-</td></tr>
+    </tbody>
+  </table></div>
+  <h4 class="code-title">CSS</h4>
+<pre class="code-block" tabindex="0" aria-label="Information Card CSS"><code>.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 637px;
+  padding: 20px;
+  background: var(--surface-card);   /* #FFFFFF */
+  border-radius: 16px;
+  overflow: clip;
+  overflow-wrap: break-word;
+}
+.info-card__eyebrow { margin: 0; font: 700 12px/16px 'Roboto', sans-serif; letter-spacing: .96px; color: var(--text-accent); }
+.info-card__title   { margin: 0; font: 500 18px/26px 'Roboto', sans-serif; color: var(--text-title); }
+.info-card__body    { margin: 0; font: 400 16px/24px 'Roboto', sans-serif; color: var(--text-title); }</code></pre>
+  <h4 class="code-title">HTML</h4>
+<pre class="code-block" tabindex="0" aria-label="Information Card HTML"><code>&lt;article class="info-card"&gt;
+  &lt;p class="info-card__eyebrow"&gt;Small title&lt;/p&gt;
+  &lt;h3 class="info-card__title"&gt;Title&lt;/h3&gt;
+  &lt;p class="info-card__body"&gt;Body text.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+  <p class="provisional"><strong>Check:</strong> Text/Accent (#8B6D9C) on white is 4.41:1, under the 4.5:1 AA minimum for 12px text. Figma uses it for the small title. Before shipping, use Text/Secondary (7.94:1) or a darker purple for that label.</p>
+</div>
+
+<div class="variant">
+  <h3>Persona Card</h3>
+  <p><strong>Used for:</strong> introducing a person, such as a user persona. It has a name, a short description and a picture.</p>
+  <div class="demo-stage device-frame" data-frame style="max-width:936px"><article class="persona-card">
+    <h4 class="persona-card__name">Name</h4>
+    <p class="persona-card__text">lorem ipsum dolor sit amet consectetur adipiscing elit minus officia deserunt consequatur soluta omnis anim qui repellendus illum proident placeat duis ut do laboris assumenda animi facilis accusamus deserunt fuga dolor cillum qui aut est omnis qui sint veniam dolor omnis mollitia velit distinctio eum sunt quod aut veniam in</p>
+    <div class="persona-card__media" role="img" aria-label="Placeholder for the persona photo">Persona - Image</div>
+  </article></div>
+  <h4 class="code-title">Anatomy</h4>
+  <ol class="anatomy">
+    <li><strong>Container</strong>: white card, larger radius and padding than the Information Card.</li>
+    <li><strong>Name</strong>: Bold 20px (Heading 3 size) in Text/Title.</li>
+    <li><strong>Description</strong>: Regular 14px, Text/Primary.</li>
+    <li><strong>Image</strong>: 300px tall, Image/Pink placeholder. A real photo uses <code>object-fit: cover</code>.</li>
+  </ol>
+  <h4 class="code-title">CSS Specifications</h4>
+  <div class="table-scroll"><table class="spec-table" aria-label="Persona Card CSS specifications">
+    <thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+    <tbody>
+      <tr><td>Width</td><td><code>100%</code>, max <code>456px</code>. Height follows the content.</td><td>-</td></tr>
+      <tr><td>Display</td><td><code>flex</code>, <code>flex-direction: column</code>, gap <code>16px</code></td><td>-</td></tr>
+      <tr><td>Padding</td><td><code>32px</code> on all sides</td><td>-</td></tr>
+      <tr><td>Background</td><td><code>#FFFFFF</code></td><td>Surface/Card</td></tr>
+      <tr><td>Radius</td><td><code>24px</code>, <code>overflow: clip</code></td><td>-</td></tr>
+      <tr><td>Name</td><td>Roboto Bold <code>20px / 28px</code>, <code>#272744</code></td><td>Heading 3, Text/Title</td></tr>
+      <tr><td>Description</td><td>Roboto Regular <code>14px / 22px</code>, <code>#000000</code></td><td>Text/Primary</td></tr>
+      <tr><td>Image area</td><td>height <code>300px</code>, full width, padding <code>12px</code>, radius <code>16px</code>, <code>#C69FA5</code></td><td>Image/Pink</td></tr>
+      <tr><td>Image label</td><td>Roboto Medium <code>14px / 21px</code>, centered, <code>#272744</code></td><td>Text/Title</td></tr>
+    </tbody>
+  </table></div>
+  <h4 class="code-title">CSS</h4>
+<pre class="code-block" tabindex="0" aria-label="Persona Card CSS"><code>.persona-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 456px;
+  padding: 32px;
+  background: var(--surface-card);   /* #FFFFFF */
+  border-radius: 24px;
+  overflow: clip;
+  overflow-wrap: break-word;
+}
+.persona-card__name { margin: 0; font: 700 20px/28px 'Roboto', sans-serif; color: var(--text-title); }
+.persona-card__text { margin: 0; font: 400 14px/22px 'Roboto', sans-serif; color: var(--text-primary); }
+.persona-card__media {
+  display: flex; align-items: center; justify-content: center;
+  height: 300px; padding: 12px;
+  border-radius: 16px; overflow: clip;
+  background: var(--image-pink);     /* #C69FA5 */
+  color: var(--text-title);
+  font: 500 14px/21px 'Roboto', sans-serif; text-align: center;
+}
+.persona-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }</code></pre>
+  <h4 class="code-title">HTML</h4>
+<pre class="code-block" tabindex="0" aria-label="Persona Card HTML"><code>&lt;article class="persona-card"&gt;
+  &lt;h3 class="persona-card__name"&gt;Lee&lt;/h3&gt;
+  &lt;p class="persona-card__text"&gt;Description of the persona.&lt;/p&gt;
+  &lt;div class="persona-card__media"&gt;
+    &lt;img src="persona-lee.png" alt="Lee, a 34-year-old gardener, smiling in a greenhouse"&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+</div>
+
+
+<h3 class="sub-h divided">Responsive Layouts</h3>
+<p>Both cards keep the same padding, radius and type on every device. Only the width changes. It follows the column the card sits in.</p>
+<div class="table-scroll"><table class="spec-table" aria-label="Card layouts by device">
+  <thead><tr><th scope="col">Card</th><th scope="col">Desktop (936px)</th><th scope="col">Tablet (810px)</th><th scope="col">Mobile (416px)</th></tr></thead>
+  <tbody>
+    <tr><td>Information Card</td><td>fills the column (<code>637px</code> default size in Figma, up to <code>936px</code> in the case study)</td><td>fills the column, <code>810px</code></td><td>fills the column, <code>416px</code></td></tr>
+    <tr><td>Persona Card</td><td>2 across, <code>456px</code> each, gap <code>24px</code></td><td>2 across, <code>393px</code> each, gap <code>24px</code></td><td>1 column, <code>416px</code></td></tr>
+    <tr><td>Padding and radius</td><td colspan="3">Information Card <code>20px</code> and <code>16px</code>. Persona Card <code>32px</code> and <code>24px</code>. Unchanged on every device.</td></tr>
+  </tbody>
+</table></div>
+<p>To let a card fill a wider column, set <code>max-width: none</code> on it. The <code>max-width</code> in the component CSS is its default size.</p>
+<h3 class="sub-h divided">Accessibility</h3>
+<ul class="rule-list">
+  <li><strong>Structure:</strong> each card is an <code>&lt;article&gt;</code> and its title is a real heading. Use the next level under the section heading (for example <code>h3</code> under an <code>h2</code>), so screen reader users can jump from card to card. The eyebrow "Small title" is a <code>&lt;p&gt;</code>, not a heading.</li>
+  <li><strong>Contrast:</strong> Title on white is 14.38:1. Body text (Text/Title) is 14.38:1 and Persona text (Text/Primary) is 21:1. Image label Text/Title on Image/Pink is 6.10:1. All pass WCAG AA.</li>
+  <li><strong>Known failure:</strong> the 12px eyebrow in Text/Accent on white is 4.41:1 and does not meet the 4.5:1 minimum. Change the label color before shipping.</li>
+  <li><strong>Images:</strong> a photo of a person needs real alt text that describes them in a useful way. A purely decorative image uses <code>alt=""</code>. A placeholder box uses <code>role="img"</code> with an <code>aria-label</code>.</li>
+  <li><strong>Not interactive:</strong> the cards are not links or buttons, so they are not in the tab order. If a whole card must be clickable, put one link on the title and stretch it over the card with <code>::after</code>. Don't wrap the card in a link with more links inside. Give it a visible focus outline, <code>3px solid #272744</code> with <code>3px</code> offset (provisional, not in Figma).</li>
+  <li><strong>Reflow and zoom:</strong> width is <code>100%</code> with a max width, so the card shrinks at 320px and never scrolls sideways. Height is never fixed, so text can grow at 200% zoom. Text uses <code>overflow-wrap: break-word</code> for long words.</li>
+  <li><strong>Small text:</strong> the Persona description is 14px and the eyebrow is 12px. Don't go smaller, and keep sentences out of the 12px size.</li>
+  <li><strong>Reading order:</strong> source order is name, description, image, which matches the visual order.</li>
+</ul>
+
+<section class="dd" aria-labelledby="dd-title">
+<h2 id="dd-title">Do's and Don'ts</h2>
+<div class="dd-grid">
+<div class="dd-col do"><h3><span aria-hidden="true">✓</span> Do</h3><ul class="rule-list">
+  <li>Use the Information Card for short text and the Persona Card for a person with an image.</li>
+  <li>Put cards on Surface/Page Background so the white stands out.</li>
+  <li>Let the height follow the content.</li>
+  <li>Use a real heading for each card title.</li>
+  <li>Write real alt text for photos.</li>
+</ul></div>
+<div class="dd-col dont"><h3><span aria-hidden="true">✕</span> Don't</h3><ul class="rule-list">
+  <li>Don't set a fixed height on a card.</li>
+  <li>Don't put cards inside other cards.</li>
+  <li>Don't use Text/Accent for body text.</li>
+  <li>Don't add shadows or borders. The design uses a plain white surface.</li>
+  <li>Don't put several buttons or links in one card.</li>
+</ul></div>
+</div></section>
+    <nav class="pager" aria-label="Page navigation">
+      <a class="pager__link pager__link--prev" href="../foundations/logo.html" rel="prev"><span class="pager__dir">&larr; Previous</span><span class="pager__name">Logo</span></a>
+      <a class="pager__link pager__link--next" href="carousel.html" rel="next"><span class="pager__dir">Next &rarr;</span><span class="pager__name">Carousel</span></a>
+    </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p>&copy; November 2026 Justin Myers. Design II.</p></div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/view-toggle.js"></script>
+</body>
+</html>
